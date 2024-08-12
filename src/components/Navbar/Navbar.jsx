@@ -3,6 +3,54 @@ import Logo from "../../assets/logo.png";
 import { FaSearch } from "react-icons/fa";
 import { MdShoppingCart } from "react-icons/md";
 import Darkmode from "../Darkmode";
+import { FaCaretDown } from "react-icons/fa";
+
+const Menus = [
+  {
+    id: 1,
+    name: "Home",
+    link: "#/",
+  },
+  {
+    id: 2,
+    name: "Top Eated",
+    link: "#/",
+  },
+  {
+    id: 3,
+    name: "Kids Wear",
+    link: "#/",
+  },
+  {
+    id: 4,
+    name: "Men Wear",
+    link: "#/",
+  },
+  {
+    id: 5,
+    name: "Women Wear",
+    link: "#/",
+  },
+];
+
+const DropdownLinks = [
+  {
+    id: 1,
+    name: "Trending Products",
+    link: "/#",
+  },
+  {
+    id: 2,
+    name: "Best Selling",
+    link: "/#",
+  },
+  {
+    id: 3,
+    name: "Top Rated",
+    link: "/#",
+  },
+];
+
 const Navbar = () => {
   return (
     <>
@@ -42,7 +90,45 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="lowerNavbar"></div>
+          <div className="lowerNavbar hidden sm:block">
+            <div className="flex justify-center items-center">
+              <ul className="flex gap-8 p-2">
+                {Menus.map((menu) => (
+                  <li key={menu.id}>
+                    <a
+                      className="hover:text-secondary duration-200"
+                      href={menu.link}
+                    >
+                      {menu.name}
+                    </a>
+                  </li>
+                ))}
+                <li className=" group relative cursor-pointer">
+                  <a className="flex items-center gap-2" href="/">
+                    Trending Products
+                    <span>
+                      {" "}
+                      <FaCaretDown className=" transition-all duration-200 group-hover:rotate-180" />{" "}
+                    </span>
+                  </a>
+                  <div className="hidden group-hover:block z-999 absolute w-[200px] rounded-md ">
+                    <ul className="  text-black bg-white py-2 ">
+                      {DropdownLinks.map((menu) => (
+                        <li key={menu.id}>
+                          <a
+                            className="hover:bg-secondary/20  inline-block transition-all duration-200 w-full px-2"
+                            href={menu.link}
+                          >
+                            {menu.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </>
