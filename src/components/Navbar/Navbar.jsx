@@ -91,7 +91,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="lowerNavbar hidden sm:block">
-            <div className="flex justify-center items-center">
+            <div data-aos="zoom-in" data-aos-duration="500"  className="flex justify-center items-center">
               <ul className="flex gap-8 p-2">
                 {Menus.map((menu) => (
                   <li key={menu.id}>

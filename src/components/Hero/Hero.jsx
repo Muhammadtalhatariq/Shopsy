@@ -52,23 +52,41 @@ const Hero = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 <div className="flex flex-col  justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
                   <div className=" pt-8 sm:pt-0 flex justify-center text-center flex-col sm:text-left ">
-                    <h1 className="lg:text-7xl sm:text-6xl text-5xl font-bold ">
+                    <h1
+                      data-aos="zoom-out"
+                      data-aos-duration="500"
+                      data-aos-once="true"
+                      className="lg:text-7xl sm:text-6xl text-5xl font-bold "
+                    >
                       {data.title}
                     </h1>
-                    <p className="text-sm pt-4">
-                     {data.description}
+                    <p
+                      data-aos="zoom-out"
+                      data-aos-duration="500"
+                      data-aos-once="true"
+                      className="text-sm pt-4"
+                    >
+                      {data.description}
                     </p>
-                    <button className="w-24 p-2 mx-28 sm:mx-0  mt-6 text-white rounded-xl transition-all duration-300 bg-gradient-to-r from-primary to-secondary">
-                      Order Now
-                    </button>
+
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                      <button
+                        data-aos-once="true"
+                        className="w-24 p-2 mx-28 sm:mx-0  mt-6 text-white rounded-xl transition-all duration-300 bg-gradient-to-r from-primary to-secondary"
+                      >
+                        Order Now
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <div className="image order-1 sm:order-2">
-                  <img
-                    className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
-                    src={data.img}
-                    alt=""
-                  />
+                  <div data-aos="zoom-out" data-aos-once="true">
+                    <img
+                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
+                      src={data.img}
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>

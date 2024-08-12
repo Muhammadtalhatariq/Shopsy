@@ -53,16 +53,20 @@ const Products = () => {
     <>
       <div className="shadow-md pb-12 bg-white dark:bg-gray-900 dark:text-white duration-200">
         <div className=" pt-14  flex  flex-col items-center mx-auto mb-10 max-w-[600px]">
-          <p className="text-primary text sm">Top Selling Products for you</p>
-          <h1 className="text-3xl font-bold">Products</h1>
-          <p className="text-xs text-gray-400 px-4 text-center">
+          <p  data-aos="fade-up" className="text-primary text sm">Top Selling Products for you</p>
+          <h1  data-aos="fade-up" className="text-3xl font-bold">Products</h1>
+          <p  data-aos="fade-up" className="text-xs text-gray-400 px-4 text-center">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
             asperiores modi Sit asperiores modi
           </p>
         </div>
         <div className=" flex justify-between items-center flex-wrap mx-auto  gap-5  px-16">
           {ProductsData.map((card) => (
-            <div className="">
+            <div
+            data-aos="fade-up"
+            data-aos-delay={card.aosDelay}
+            key={card.id}
+            className="">
               <img
                 className="h-60 w-48 pl-10 rounded-lg"
                 src={card.img}
@@ -79,7 +83,7 @@ const Products = () => {
             </div>
           ))}
         </div>
-      <div  className="flex items-center justify-center">
+      <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"  className="flex items-center justify-center">
       <button className=" text-white p-2 mt-8  rounded-xl transition-all duration-300 bg-gradient-to-r from-primary to-secondary">
           View All Button
         </button>
