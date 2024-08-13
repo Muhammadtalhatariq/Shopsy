@@ -51,7 +51,7 @@ const ProductsData = [
 const Products = () => {
   return (
     <>
-      <div className="shadow-md pb-12 bg-white dark:bg-gray-900 dark:text-white duration-200">
+      <div className="shadow-md pb-12">
         <div className=" pt-14  flex  flex-col items-center mx-auto mb-10 max-w-[600px]">
           <p  data-aos="fade-up" className="text-primary text sm">Top Selling Products for you</p>
           <h1  data-aos="fade-up" className="text-3xl font-bold">Products</h1>

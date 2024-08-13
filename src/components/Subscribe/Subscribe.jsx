@@ -14,13 +14,13 @@ const Subscribe = () => {
   return (
     <div>
       <div style={BannerStyle} className="">
-        <div className="py-10">
+        <div className="sm:py-10 py-2">
           <div className="flex justify-center items-center flex-col space-y-6 max-w-xl mx-auto ">
-            <p className="text-4xl font-semibold text-white">
+            <p className="sm:text-4xl text-xl font-semibold text-white">
               Get Notified About New Products
             </p>
-            <input
-              className="w-full p-3"
+            <input 
+              className="sm:w-full w-72 p-3"
               placeholder="Enter your email"
               type="text"
             />

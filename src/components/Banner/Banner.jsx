@@ -5,7 +5,7 @@ import { IoFastFood } from "react-icons/io5";
 import { GiFoodTruck } from "react-icons/gi";
 const Banner = () => {
   return (
-    <div className="shadow-md pb-12 bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <div className="shadow-md pb-12">
       <div className="flex flex-wrap">
         <div
           data-aos="zoom-in"

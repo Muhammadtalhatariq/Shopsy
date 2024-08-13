@@ -53,29 +53,47 @@ const Footer = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10 pl-6 mx-4">
-            <div>
+            <div className="py-6">
               <h1 className="text-2xl font-semibold">Important Links</h1>
               <ul>
                 {FooterLinks.map((data) => (
                   <li className="py-2">
-                    <a href={data.link}>{data.title}</a>
+                    <a className="hover:text-primary" href={data.link}>{data.title}</a>
                   </li>
                 ))}
               </ul>
             </div>
-            <div>
+            <div className="py-6">
               <h1 className="text-2xl font-semibold">Links</h1>
-              <ul >
+              <ul>
                 {FooterLinks.map((data) => (
-                  <li  className="py-2" >
-                    <a href={data.link}>{data.title}</a>
+                  <li className="py-2">
+                    <a className="hover:text-primary" href={data.link}>{data.title}</a>
                   </li>
                 ))}
               </ul>
+            </div>
+            <div className=" py-6">
+              <div className=" flex gap-4">
+                <a  href="#">
+                  <FaInstagram  size={30}/>
+                </a>
+                <a  href="#">
+                  <FaLinkedin  size={30}/>
+                </a>
+                <a  href="#">
+                  <FaFacebook size={30}/>
+                </a>
+              </div>
+              <div className="flex items-center gap-2  pt-4">
+               <a href="#"> <FaLocationArrow/></a> <span>Lahore, Pakistan</span>
+              </div>
+              <div className="flex items-center gap-2  pt-4">
+               <a href="#"> <FaMobileAlt/></a> <span>+92 123456789</span>
+              </div>
             </div>
           </div>
         </div>
-        <div></div>
       </div>
     </div>
   );

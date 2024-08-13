@@ -51,10 +51,10 @@ const DropdownLinks = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({handleOrderPopup}) => {
   return (
     <>
-      <div className="Navbar shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
+      <div className="Navbar shadow-md relative z-40">
         <div>
           <div className="upperNavbar bg-primary/40">
             <div className="flex justify-between items-center md:px-14 px-2 py-2">
@@ -74,7 +74,9 @@ const Navbar = () => {
                     className="absolute right-3 top-2 text-gray-500 group-hover:text-primary"
                   />
                 </div>
-                <button className=" flex items-center gap-1 p-2 rounded-xl transition-all duration-300 bg-gradient-to-r from-primary to-secondary group">
+                <button 
+                onClick={handleOrderPopup}
+                className=" flex items-center gap-1 p-2 rounded-xl transition-all duration-300 bg-gradient-to-r from-primary to-secondary group">
                   <span className="group-hover:block hidden transition-all duration-200">
                     {" "}
                     Order

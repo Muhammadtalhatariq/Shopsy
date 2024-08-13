@@ -28,9 +28,9 @@ const ProductsData = [
   },
 ];
 
-const TopProducts = () => {
+const TopProducts = ({handleOrderPopup}) => {
   return (
-    <div className="shadow-md pb-12 bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <div className="shadow-md pb-12">
       <div className=" pt-8 flex  flex-col items-start pl-10 mb-10 max-w-[600px]">
         <p data-aos="fade-up" className="text-primary text sm">
           Top Selling Products for you
@@ -66,7 +66,9 @@ const TopProducts = () => {
                       <p className="text-xs px-3 text-center line-clamp-2">
                         {data.description}
                       </p>
-                      <button className="w-24 p-2 mx-28 sm:mx-0  mt-6 text-white rounded-2xl transition-all duration-300 bg-gradient-to-r from-primary to-secondary">
+                      <button
+                      onClick={handleOrderPopup}
+                      className="w-24 p-2 mx-28 sm:mx-0  mt-6 text-white rounded-2xl transition-all duration-300 bg-gradient-to-r from-primary to-secondary">
                         Order Now
                       </button>
                     </div>

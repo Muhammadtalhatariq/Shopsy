@@ -28,7 +28,7 @@ const ImageList = [
   },
 ];
 
-const Hero = () => {
+const Hero = ({handleOrderPopup}) => {
   var settings = {
     dots: false,
     arrows: false,
@@ -43,7 +43,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="Hero text-black relative overflow-hidden min-h-[550px] sm:min-h-[600px] flex justify-center items-center shadow-md bg-gray-100 dark:bg-gray-900 dark:text-white duration-200 ">
+    <div className="Hero relative overflow-hidden min-h-[550px] sm:min-h-[600px] flex justify-center items-center shadow-md  ">
       <div className="absolute bg-primary/40 h-[700px] w-[700px] right-0 -top-1/2  rotate-45 rounded-3xl -z"></div>
       <div className="container pb-8 sm:pb-0">
         <Slider {...settings}>
@@ -71,6 +71,7 @@ const Hero = () => {
 
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                       <button
+                      onClick={handleOrderPopup}
                         data-aos-once="true"
                         className="w-24 p-2 mx-28 sm:mx-0  mt-6 text-white rounded-xl transition-all duration-300 bg-gradient-to-r from-primary to-secondary"
                       >
